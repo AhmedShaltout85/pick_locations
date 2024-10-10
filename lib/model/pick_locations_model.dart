@@ -14,6 +14,21 @@ class PickLocationModel {
       this.flag,
       this.realAddress});
 
+  PickLocationModel.update(String address, String latitude, String longitude) {
+    latitude = longitude;
+    longitude = latitude;
+    flag = 1;
+    realAddress = address;
+  }
+
+  PickLocationModel.add(String address, String latitude, String longitude) {
+    address = address;
+    latitude = longitude;
+    longitude = latitude;
+    flag = 0;
+    realAddress = "";
+  }
+
   PickLocationModel.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     address = json['address'];
